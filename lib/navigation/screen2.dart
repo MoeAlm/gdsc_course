@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gdsc_flutter/screen1.dart';
+import 'package:gdsc_flutter/navigation/screen1.dart';
 
 class SecondScreen extends StatelessWidget {
   final name;
