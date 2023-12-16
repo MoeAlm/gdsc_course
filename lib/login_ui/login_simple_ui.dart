@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 
 class LoginSimpleUi extends StatelessWidget {
+  const LoginSimpleUi({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -11,11 +13,11 @@ class LoginSimpleUi extends StatelessWidget {
       body: Column(
         children: [
           Image.asset('assets/images/login.png'),
-          Spacer(),
+          const Spacer(),
           Container(
             width: double.infinity,
             height: 300,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: Colors.deepOrangeAccent,
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(20),
@@ -23,17 +25,17 @@ class LoginSimpleUi extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Spacer(),
-                Text(
+                const Spacer(),
+                const Text(
                   'Hello',
                   style: TextStyle(fontSize: 80, color: Colors.white),
                 ),
-                Text(
+                const Text(
                   'Welcome in our app app \n login to use the app',
                   style: TextStyle(fontSize: 20, color: Colors.white),
                   textAlign: TextAlign.center,
                 ),
-                Spacer(),
+                const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -41,10 +43,10 @@ class LoginSimpleUi extends StatelessWidget {
                       width: 120,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text('Login'),
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
                             foregroundColor: Colors.black),
+                        child: const Text('Login'),
                       ),
                     ),
                     SizedBox(
@@ -53,13 +55,13 @@ class LoginSimpleUi extends StatelessWidget {
                         onPressed: () {},
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.white,
-                            side: BorderSide(color: Colors.white)),
-                        child: Text('Sigin'),
+                            side: const BorderSide(color: Colors.white)),
+                        child: const Text('Sigin'),
                       ),
                     )
                   ],
                 ),
-                Spacer()
+                const Spacer()
               ],
             ),
           )

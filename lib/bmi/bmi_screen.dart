@@ -21,7 +21,7 @@ class _BmiScreenState extends State<BmiScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Bmi Calculator'),
+        title: const Text('Bmi Calculator'),
       ),
       body: Column(
         children: [
@@ -42,7 +42,7 @@ class _BmiScreenState extends State<BmiScreen> {
                         decoration: BoxDecoration(
                             color: isMale ? Colors.green : Colors.grey,
                             borderRadius: BorderRadius.circular(20)),
-                        child: Column(
+                        child: const Column(
                           children: [
                             Icon(
                               Icons.male,
@@ -57,7 +57,7 @@ class _BmiScreenState extends State<BmiScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Expanded(
@@ -71,7 +71,7 @@ class _BmiScreenState extends State<BmiScreen> {
                         decoration: BoxDecoration(
                             color: isMale ? Colors.grey : Colors.green,
                             borderRadius: BorderRadius.circular(20)),
-                        child: Column(
+                        child: const Column(
                           children: [
                             Icon(
                               Icons.female,
@@ -95,7 +95,7 @@ class _BmiScreenState extends State<BmiScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Height',
                   style: TextStyle(fontSize: 30, color: Colors.white),
                 ),
@@ -106,9 +106,9 @@ class _BmiScreenState extends State<BmiScreen> {
                   children: [
                     Text(
                       '${height.round()}',
-                      style: TextStyle(fontSize: 50, color: Colors.white),
+                      style: const TextStyle(fontSize: 50, color: Colors.white),
                     ),
-                    Text(
+                    const Text(
                       'cm',
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     )
@@ -141,13 +141,13 @@ class _BmiScreenState extends State<BmiScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text('weight',
+                            const Text('weight',
                                 style: TextStyle(
                                     fontSize: 30, color: Colors.white)),
                             Text(
                               '$weight',
                               style:
-                                  TextStyle(fontSize: 40, color: Colors.white),
+                                  const TextStyle(fontSize: 40, color: Colors.white),
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -159,9 +159,9 @@ class _BmiScreenState extends State<BmiScreen> {
                                       weight++;
                                     });
                                   },
-                                  child: Icon(Icons.add),
+                                  child: const Icon(Icons.add),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 FloatingActionButton(
@@ -171,7 +171,7 @@ class _BmiScreenState extends State<BmiScreen> {
                                       weight--;
                                     });
                                   },
-                                  child: Icon(Icons.remove),
+                                  child: const Icon(Icons.remove),
                                 ),
                               ],
                             )
@@ -179,7 +179,7 @@ class _BmiScreenState extends State<BmiScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Expanded(
@@ -190,13 +190,13 @@ class _BmiScreenState extends State<BmiScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text('Age',
+                            const Text('Age',
                                 style: TextStyle(
                                     fontSize: 30, color: Colors.white)),
                             Text(
                               '$age',
                               style:
-                                  TextStyle(fontSize: 40, color: Colors.white),
+                                  const TextStyle(fontSize: 40, color: Colors.white),
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -208,9 +208,9 @@ class _BmiScreenState extends State<BmiScreen> {
                                       age++;
                                     });
                                   },
-                                  child: Icon(Icons.add),
+                                  child: const Icon(Icons.add),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 FloatingActionButton(
@@ -220,7 +220,7 @@ class _BmiScreenState extends State<BmiScreen> {
                                       age--;
                                     });
                                   },
-                                  child: Icon(Icons.remove),
+                                  child: const Icon(Icons.remove),
                                 ),
                               ],
                             )
@@ -233,7 +233,7 @@ class _BmiScreenState extends State<BmiScreen> {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: 60,
             width: double.infinity,
             child: MaterialButton(
@@ -244,7 +244,7 @@ class _BmiScreenState extends State<BmiScreen> {
                   return ResultScreen(result: result.round());
                 }));
               },
-              child: Text(
+              child: const Text(
                 'Claculate',
                 style: TextStyle(color: Colors.white, fontSize: 30),
               ),

@@ -21,13 +21,13 @@ class _CounterScreenState extends State<CounterScreen> {
              setState(() {
                count++;
              });
-           }, child: Text('Plus')),
-            Text('$count', style: TextStyle(fontSize: 30),),
+           }, child: const Text('Plus')),
+            Text('$count', style: const TextStyle(fontSize: 30),),
             TextButton(onPressed: (){
               setState(() {
                 count--;
               });
-            }, child: Text('Minus'))
+            }, child: const Text('Minus'))
           ],
         ),
       ),

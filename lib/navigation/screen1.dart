@@ -12,20 +12,20 @@ class FirstScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('First Screen'),
+            const Text('First Screen'),
             ElevatedButton(
                 onPressed: () {
                   Navigator.pushReplacement(
                       context, MaterialPageRoute(builder: (context) {
-                        return SecondScreen(name: 'Mohammed',);
+                        return const SecondScreen(name: 'Mohammed',);
                   }));
                 },
-                child: Text('Go to second screen')),
+                child: const Text('Go to second screen')),
             ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text('Back to Second Screen'),),
+                child: const Text('Back to Second Screen'),),
           ],
         ),
       ),

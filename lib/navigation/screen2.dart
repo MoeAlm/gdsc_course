@@ -17,10 +17,10 @@ class SecondScreen extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return FirstScreen();
+                    return const FirstScreen();
                   }));
                 },
-                child: Text('Go to first screen'))
+                child: const Text('Go to first screen'))
           ],
         ),
       ),
