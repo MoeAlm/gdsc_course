@@ -91,42 +91,50 @@ class _BmiScreenState extends State<BmiScreen> {
             ),
           )),
           Expanded(
-              child: Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Text(
-                  'Height',
-                  style: TextStyle(fontSize: 30, color: Colors.white),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  textBaseline: TextBaseline.alphabetic,
-                  crossAxisAlignment: CrossAxisAlignment.baseline,
-                  children: [
-                    Text(
-                      '${height.round()}',
-                      style: const TextStyle(fontSize: 50, color: Colors.white),
-                    ),
-                    const Text(
-                      'cm',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    )
-                  ],
-                ),
-                Slider(
-                    min: 80,
-                    max: 240,
-                    value: height,
-                    onChanged: (value) {
-                      setState(() {
-                        height = value;
-                        print(height);
-                      });
-                    })
-              ],
-            ),
-          )),
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Container(
+                  padding: EdgeInsets.all(20),
+                            decoration: BoxDecoration(
+                color: Colors.redAccent,
+                borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Height',
+                    style: TextStyle(fontSize: 30, color: Colors.white),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    textBaseline: TextBaseline.alphabetic,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    children: [
+                      Text(
+                        '${height.round()}',
+                        style: const TextStyle(fontSize: 50, color: Colors.white),
+                      ),
+                      const Text(
+                        'cm',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      )
+                    ],
+                  ),
+                  Slider(
+                      min: 80,
+                      max: 240,
+                      value: height,
+                      onChanged: (value) {
+                        setState(() {
+                          height = value;
+                          print(height);
+                        });
+                      })
+                ],
+                            ),
+                          ),
+              )),
           Expanded(
             child: Container(
               child: Padding(
